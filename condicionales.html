@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Logo inicial-->
+    <link rel="icon" href="img/inicio.png">
+    <title>Condicionales </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/81581fb069.js" class="boton" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="">
+                <img src="img/boton.png" alt=""  style="margin: 15px;">
+                <h2 style="margin:25px">ECCO JS</h2>
+            
+                <!--Buscador-->
+                    <div class="buscador container-fluid ">
+                            <div class="search-input-box">
+                                        <input for="busqueda" class="form-control me-2" type="text" id="busqueda" placeholder="¿Qué quieres buscar?" />
+                                        <div id="searchSuggestions"></div>
+                            
+                    <!--Boton buscar-->
+                    <button  class="btn btnes" onclick="buscar()">Buscar</button>         
+                            </div>
+                    </div>
+                    <ul>
+                        <li><a href="juego.html">
+                            Prueba
+                        </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Otros proyectos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="variable.html">Tipos de datos y Varaibles</a></li>
+                              <li><a class="dropdown-item" href="funciones.html">Funciones</a></li>
+                              <li><a class="dropdown-item" href="condicionales.html">Condicionales y Loops</a></li>
+                              <li><a class="dropdown-item" href="array.html">Array y objetos</a></li>
+                              <li> <a class="dropdown-item" href="code.html">Code</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <h1 style="text-align: center; color: cornflowerblue;">Programa con Condicionales</h1>
+       <div style="text-align: center;">
+        <label for="number-input">Ingresa un número:</label>
+        <input type="number" id="number-input">
+        <button class="btnes m-3" onclick="checkNumber()">Verificar</button>
+        <button class="btnes m-3" onclick="clearCode()">Limpiar</button>
+        <div id="output1" class="output"> Resultado: </div>
+        </div>
+      
+        <h1 style="text-align: center; color: cornflowerblue;">Programa con Loops</h1>
+        <div style="text-align: center;">
+        <button class="btnes m-3" onclick="saludarEstudiantes()">Saludar Estudiantes</button>
+        </div>
+
+        <h2 style="text-align: center; color: cornflowerblue; padding: 2px;">
+            <b>Condicionales </b>
+         </h2>
+
+        <p>
+        Hasta ahora hemos visto código que se ejecuta línea a línea, una detrás de otra.
+        Pero a veces se hace necesario romper esa secuencia y crear ramas que nos permitan 
+        Tomar diferentes caminos en el código dependiendo de ciertas condiciones.
+        Por ejemplo, imagina cómo podríamos hacer un programa que nos diga si un número 
+        es mayor o menor a diez. Si es mayor a 10 debería imprimir una cosa, pero si es 
+        menor debería imprimir otra.
+        A este concepto se le conoce como condicionales y su sintaxis es la siguiente:
+        </p>
+        <p>
+            <b>
+                if (<condición>) {
+                    // código que se ejecuta si se cumple la condición
+                  }
+            </b>
+        </p>
+        <p>
+            La condición puede ser cualquier expresión que evalúa a verdadero (true) o falso (false). 
+            Crea un archivo llamado conditionals.js y agrega el siguiente contenido:
+        </p>
+
+        <p>
+            <b>
+                if (true) {
+                    console.log("Hola Mundo");
+                  }
+            </b>
+        </p>
+        <p>
+            <b>Nota:</b> Las líneas que terminan con un corchete ({ o }) no se les agrega punto y coma (;).
+            Ejecúta el archivo desde la consola, deberías ver lo siguiente:
+        </p>
+
+        <p>
+            <b>
+                $ node conditionals.js
+                Hola mundo
+            </b>
+        </p>
+
+        <p>
+            Prueba ahora con 1 == 2, 1 < 6 y 8 < 6 en la condición y fíjate que tenga sentido.
+            Ahora que ya sabes cómo funciona los condicionales (muchos los llamamos los ifs) 
+            crea un programa en un archivo llamado number.js que imprima "El número es menor 
+            a 10" solo si el número que está almacenado en la variable num es menor a 10:
+        </p>
+        <p>
+        <b>
+            var num = 8;
+
+            if (num < 10) {
+              console.log("El número es menor a 10");
+            }
+        </b>
+        </p>
+
+    <p>
+        Si lo ejecutas te debería aparecer lo siguiente:
+    </p>
+
+    <p>
+        <b>
+            $ node number.js
+            El número es menor a 10
+        </b>
+    </p>
+
+    <p>
+        Ahora vamos a modificar el programa para que, además de imprimir "El número es menor a 10" 
+        si el número es menor a 10, también imprima "El número es igual o mayor a 10" si el número 
+        es igual o mayor a 10. Podemos utilizar otro condicional debajo del que ya teníamos:
+    </p>
+
+    <p>
+        <b>
+            var num = 8;
+
+            if (num < 10) {
+            console.log("El número es menor a 10");
+            }
+
+            if (num >= 10) {
+            console.log("El número es igual o mayor a 10");
+            }
+        </b>
+    </p>
+
+    <p>
+        Ejecuta el programa e ingresa un número menor a 10, después un número mayor a 10, y por último 10.
+        Verifica que el resultado sea el esperado.
+    </p>
+
+    <h2 style="text-align: center; color: cornflowerblue;">
+        <b>De lo contrario (else): </b>
+     </h2>
+
+     <p>
+        Lo único que necesitas para hacer condicionales es el if. 
+        Pero existen dos atajos que te van a permitir escribir código más corto.
+        El primer atajo es el else, que significa "de lo contrario" en Inglés. 
+        El else nos permite definir el código que se debe ejecutar si el if no se cumple, 
+        es decir si la condición evalúa a falso. La sintaxis es la siguiente:
+     </p>
+
+     <p>
+        <b>
+            if (<condición>) {
+                // código que se ejecuta si se cumple la condición
+              } else {
+                // código que se ejecuta si NO se cumple la condición
+              }
+        </b>
+    </p>
+
+    <p>
+        Podemos modificar el programa anterior, que nos dice si el
+        número almacenado en la variable num es menor a 10, o si es mayor o igual, con un else.
+    </p>
+
+    <p>
+        <b>
+            var num = 8;
+
+            if (num < 10) {
+              console.log("El número es menor a 10");
+            } else {
+              console.log("El número es igual o mayor a 10");
+            }
+        </b>
+    </p>
+
+    <p>
+        Más corto y si lo ejecutas debería funcionar igual.
+    </p>
+
+    <h2 style="text-align: center; color: cornflowerblue;">
+        <b>Condiciones anidadas </b>
+     </h2>
+    
+     <p>
+        Ahora imagina que queremos modificar este programa para que en vez de imprimir 
+        "El número es igual o mayor a 10", imprima "El número es igual a 10" o 
+        "El número es mayor a 10" dependiendo si el número es igual 10 o mayor a 10 respectivamente.
+        En JavaScript (y en la mayoría de lenguajes de programación) es posible anidar condicionales,
+        así que una posible solución sería la siguiente:
+     </p>
+     <p>
+     <b>
+        var num = 8;
+
+        if (num < 10) {
+          console.log("El número es menor a 10");
+        } else {
+          if (num > 10) {
+            console.log("El número es mayor a 10");  
+          } else {
+            console.log("El número es igual a 10");
+          }
+        }
+    </b>
+    </p>
+    <p>
+        Prúebalo con un número menor a 10, otro mayor a 10 y con 10. Te debería aparecer 
+        "El número es menor a 10", "El número es mayor a 10" y "El número es igual a 10" respectivamente.
+    </p>
+
+    <h2 style="text-align: center; color: cornflowerblue;">
+        <b>De lo contrario, si (else if): </b>
+     </h2>
+
+     <p>
+        En general, es preferible no tener que anidar condicionales porque son difíciles de leer 
+        y entender. Otro atajo que nos ofrece JavaScript para los condicionales es el else if, 
+        que significa "De lo contrario, si ..." en Inglés. La sintaxis es la siguiente:
+     </p>
+
+     <p>
+        <b>
+            if (<primera condición>) {
+                // código que se ejecuta si <primera condición> se cumple
+              } else if (<segunda condición>) {
+                // código si <primera condición> NO se cumple, pero <segunda condición> se cumple
+              } else if (<tercera condición>) {
+                // código si <primera condición> y <segunda condición> NO se cumplen, pero <tercera condición> sí se cumple
+              } else {
+                // código si ninguna de las condiciones se cumple
+              }
+       </b>
+       </p>
+
+       <P>
+        Puedes definir tantos else if como desees. El else es opcional.
+        Modifiquemos nuestro ejemplo anterior y en vez de utilizar 
+        condiciones anidadas, utilicemos else if:
+       </P>
+
+       <p>
+        <b>
+            var num = 8;
+
+            if (num < 10) {
+              console.log("El número es menor a 10");
+            } else if (num > 10) {
+              console.log("El número es mayor a 10");  
+            } else {
+              console.log("El número es igual a 10");
+            }
+       </b>
+       </p>
+       
+       <P>
+        Lo más importante de entender en este código es que el programa sólo va a entrar a una de estas ramas.
+        Por ningún motivo va a entrar a dos de ellas. Si la condición del primer if se cumple, el programa 
+        ejecuta el código que esté en ese bloque y después salta hasta después del else para continuar con 
+        el resto del programa o terminar.
+        Si la condición del primer if no se cumple, pero la del else if sí se cumple, el programa ejecuta 
+        el código de ese bloque y salta hasta después del else para continuar con el resto del programa o
+        terminar.
+       </P>
+
+       <h2 style="text-align: center; color: cornflowerblue;">
+        <b>Condiciones compuestas </b>
+     </h2>
+
+     <P>
+        Imagina que queremos escribir un programa que imprima "El número está entre 10 y 20" si el valor 
+        de una variable está efectivamente entre 10 y 20. ¿Cómo te imaginas que lo podríamos solucionar?
+        Una opción es usar condiciones anidadas, de esta forma:
+     </P>
+
+     <p>
+        <b>
+            var num = 15;
+
+            if (num >= 10) {
+            if (num <= 20) {
+                console.log("El número está entre 10 y 20");
+            }
+            }
+       </b>
+       </p>
+
+       <P>
+        Sin embargo, cómo decíamos antes, leer condiciones anidadas es difícil y, en lo posible, es mejor 
+        evitarlas. En cambio, podemos utilizar los operadores lógicos y (&&) y ó (||) para crear condiciones 
+        compuestas. El ejemplo anterior lo podemos mejorar con y:
+       </P>
+
+       <p>
+        <b>
+            var num = 15;
+
+            if (num >= 10 && num <= 20) {
+              console.log("El número está entre 10 y 20");
+            }
+       </b>
+       </p>
+
+      <p>
+        Lo que estamos diciendo con este código es: si el número es mayor o igual a 10 y menor o
+        igual 20 entonces imprima "El número está entre 10 y 20". Fíjate que a cada lado del && 
+        hay una expresión que evalúa a verdadero o falso: num >= 10 y num <= 20.
+        Imagina ahora que necesitamos escribir un programa que imprima "Excelente elección" cuando
+        el valor de una variable sea "rojo" o "negro" únicamente:
+      </p>
+
+      <p>
+        <b>
+            var color = "negro";
+
+            if (color === "rojo" || color === "negro") {
+            console.log("Excelente elección");
+            }
+       </b>
+       </p>
+
+    </main>
+
+    <footer>
+        <p>©Derechos reservados A.K.Alexandra</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="buscador.js"></script>
+    <script src="sugerencia.js"></script>
+    <script src="condi.js"></script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+
+</html>

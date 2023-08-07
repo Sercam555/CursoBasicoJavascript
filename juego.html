@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--logo al inicio-->
+  <link rel="icon" href="img/icono.png">
+
+  <title>Juega</title>
+  <style>
+
+        .icon
+        {
+          height: 45px;
+          width: 45px;
+        }
+
+        body {
+          text-align: center;
+          font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        button {
+          font-size: 16px;
+          padding: 10px 20px;
+          margin-top: 20px;
+          background-color: deepskyblue;
+        }
+        .titulo
+        {
+            color: blueviolet;
+            padding: 2px;
+            margin: 2px;
+            font-size: 50px;
+            padding: 15px;
+        }
+        .titulo1
+        {
+            color: blue;
+            font-style: italic;
+        }
+        .opcion
+        {
+            color: darkblue;
+            font-size: 25px;
+        }
+        .lista
+        {
+            list-style:inside;
+            text-align: center;
+            padding: 5px;
+        }
+        .r
+        {
+            color: red;
+            font-style: italic;
+            padding: 25px;
+        }
+
+        /*prueba ¿Buscador?*/
+        .buscador
+        {
+            padding: 5px;
+            margin: 15px;
+            display:flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            margin-right: 55px;
+            margin-left: 55px;
+            position: center;
+            
+        }
+        .btn
+        {
+            padding: 5px;
+            margin: 15px;
+            display:flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            margin-right: 55px;
+            margin-left: 55px;
+            position: relative;
+        }
+
+        .search-input-box {
+          width: 100%;
+          border-radius: 5px;
+          position: relative;
+          color: #f5f6f40e;
+          box-shadow: 0 1px 5px 3px ;
+            margin-right: 270px;
+        }
+
+        .search-input-box input {
+          width: 100%;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          height: 55px;
+          padding: 0 85px 0px 80px;
+          font-size: 18px;
+        }
+
+        .icon {
+          position: absolute;
+          top: 15px;
+          right: 25px;
+          font-size: 22px;
+          cursor: pointer;
+          color: #0d141f;
+        }
+
+    
+    </style>  
+</head>
+<body>
+   <h1 class="titulo">¡Ven a diverirte! <br> Juega:</h1> </h1> 
+  <h1 class="titulo1">Piedra, Papel o Tijera</h1>
+  <p class="opcion">Elige tu opción:</p>
+  <button onclick="play('piedra')">Piedra</button> 
+  <button onclick="play('papel')">Papel</button>
+  <button onclick="play('tijera')">Tijera</button>
+  <p id="result"></p>
+  <p class="r"><b>Reglas del Juego</b>
+    <ul class="lista">
+        <li>Papel le Gana a Piedra</li>
+        <li>Piedra le Gana a Tijeras</li>
+        <li>Tijeras le Gana a Papel</li>
+    </ul>
+  </p>
+
+  <button> <a style="text-decoration:none" href="index.html">Regresar</a></button>
+  <footer>
+    <p>©Derechos reservados A.K.Alexandra</p>
+</footer>
+  <script src="prueba.js"></script> 
+</body>
+</html>

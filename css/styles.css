@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #e4b9da;
+    overflow-x: hidden;
+}
+
+header, header div, header ul{
+    display: flex;
+    align-items: center;
+}
+nav{
+    justify-content: space-between;
+    background: #e4b9da;
+    padding: 0 30px 0 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 5px;
+}
+header, header a{
+    color: #1a1318;
+    text-decoration: none;
+}
+header li{
+    list-style: none !important;
+    margin: 10px !important;
+}
+header img{
+    width: 40px;
+}
+.me-2 {
+    margin-right: 25.5rem!important;
+}
+header a{
+    transition: all 0.3s ease-in-out;
+}
+header a:hover{
+    display: block;
+    transform: scale(1.2);
+}
+
+main
+{
+    background-color: rgba(82, 243, 248, 0.27);
+}
+
+/*prueba ¿Buscador?*/
+
+.search-input-box {
+	width: 100%;
+	border-radius: 5px;
+	position: relative;
+	color: #f5f6f40e;
+	box-shadow: 0 1px 5px 3px ;
+    margin-right: 270px;
+}
+
+.search-input-box input {
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	height: 55px;
+	padding: 0 -1px 0px 80px;
+	font-size: 18px;
+}
+
+.icon {
+	position: absolute;
+	top: 15px;
+	right: 25px;
+	font-size: 22px;
+	cursor: pointer;
+	color: #0d141f;
+}
+
+/* Contenedor de sugerencias */
+.container-suggestions {
+	max-height: 280px;
+	opacity: 0;
+	pointer-events: none;
+	padding: 0;
+	overflow-y: auto;
+}
+
+.search-input-box.active .container-suggestions {
+	opacity: 1;
+	pointer-events: auto;
+	padding: 10px 8px;
+}
+
+.search-input-box.active .container-suggestions li {
+	display: block;
+}
+
+.container-suggestions li {
+	list-style: none;
+	width: 100%;
+	padding: 8px 12px;
+	border-radius: 5px;
+	display: none;
+}
+
+#searchSuggestions {
+	display:none;
+	  background-color: #f1f1f1;
+	  color: #a39f9f;
+	  border: 1px solid #ccc;
+	  padding: 6px;
+	  position: absolute;
+	  font-size: 15px;
+	 
+	width: 1000px;
+	height: 70px;
+    top:55px;
+	}
+/*Aqui culmina la prueba*/
+
+.container{
+    box-sizing: border-box;
+    background: rgb(204, 138, 214);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #311ab0;
+    width: 100vw;
+    border-radius:1000px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+}
+.container h1, .container h2, .container h3{
+    font-weight: lighter;
+}
+.container h1{
+    font-size: 55px;
+    color: #0e0aec;
+}
+.resultados, .resultados-container{
+    border: 5px solid;
+    border-radius: 20px;
+}
+.resultados{
+    padding: 5px;
+}
+.results-up{
+    display: flex;
+    align-items: center;
+}
+.results-up div{
+    margin: 20px;
+    text-align: center;
+}
+.machine-img.reflex{
+    transform: scaleX(-1);
+}
+.resultados-container .img
+{
+    height: 10px;
+    width: 20px;
+}
+.results-down{
+    text-align: center;
+}
+.down-panel{
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.down-panel h2{
+    color: #1b1b18;
+    font-size: 32px;
+}
+.eleccion button{
+    background: transparent;
+    padding: 10px;
+    width: 240px;
+    height: 240px;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+}
+.paper img{
+    transform: scaleX(-1);
+}
+.eleccion button, .eleccion button figure{
+    border: 5px solid #ffffff;
+    border-radius: 100%;
+    margin: 10px;
+}
+.eleccion button figure{
+    margin: 0;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eleccion button img{
+    width: 140px;
+    height: 140px;
+}
+.eleccion button:hover{
+    background: #fff;
+    box-shadow: -1px 2px 18px 0px #fff;
+}
+.eleccion button:hover figure{
+    border: 5px solid  #e4b9da;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.cover button{
+    color: #fff;
+    outline: none;
+    background: #d349e6;
+    cursor: pointer;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 30px 50px;
+}
+.cover button:hover{
+    background: #e293db;
+}
+.cover.reset{
+    display: flex;
+}
+svg{
+    min-width: 320px;
+}
+footer{
+    text-align: center;
+    color: #4e11c0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 80px;
+    background-color: #e4b9da;
+    margin: 5px;
+    padding: 35px;
+}
+
+/*Variable*/
+.variable 
+{
+    color: black;
+}
+
+.parra
+{
+    color:rgb(15, 14, 15);
+}
+
+.lista li, p
+{
+    color: black;
+    list-style: none;
+    font-family: cursive;
+    text-align: center;
+}	
+
+.vid
+{
+   text-align: center;
+}
+
+.datos
+{
+    background-color: transparent !important;
+}
+
+.logica
+{
+   text-align: center;
+   align-items: center;
+}
+
+.btnes
+{
+    background: #eb94d0;
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+    text-shadow: 3px 2px 1px #9daef5;
+    -webkit-box-shadow: 6px 5px 24px #666666;
+    -moz-box-shadow: 6px 5px 24px #666666;
+    box-shadow: 6px 5px 24px #666666;
+    color:black;
+}
+.btnes:hover
+{
+    background: #2079b0;
+    background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: -moz-linear-gradient(top, #2079b0, #eb94d0);  
+    background-image: -o-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
+    color:black;
+    text-decoration: none;
+  
+}
+
+/*Imagen funciones*/
+
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 15px;
+    margin: 5px;
+  }
+  
+/*condicionales*/
+.output1 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /*array*/
+.output2 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+@media (max-width:480px){
+    .results-up div{
+        margin: -5px;
+    }
+    header{
+        padding: 0;
+    }
+}
